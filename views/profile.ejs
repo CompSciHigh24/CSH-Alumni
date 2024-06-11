@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSH Alumni Directory</title>
+  <link rel="stylesheet" href="/profile.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1 class="title">The Alumni Network</h1>
+  <%- include('partials/navbar.ejs') %>
+    
+  
+
+  <div class="container-fluid">
+    
+      <!-- MAIN CONTENT -->
+      <main>
+
+        <!-- h1 -->
+        <div class = "searchbar-container">
+          <%- include('partialsBar/searchbar.ejs') %>
+        </div>
+
+        <button class="button-33" role="button">Button 33</button>
+
+          <% for (let i = 0; i < found.length; i++) { %>
+            <% if(i % 3 == 0){ %>
+              <div class= "row">
+            <% } %>
+            <div class = "col">
+              <section class="cards" id="sulek">
+                <article class="card card--1">
+                  <div class="card__img"></div>
+                  <a href="/profiles/<%= found[i]._id %>" class="card_link">
+                     <div class="card__img--hover"></div>
+                   </a>
+                  <div class="card__info">
+                    <span class="card__category"><%= found[i].school %></span>
+                    <h3 class="card__title"><%= found[i].name %></h3>
+                    <span class="card__by">by <a href="/profiles/<%= found[i]._id %>" class="card__author" title="author"> Class of <%= found[i].gradyear %></a></span>
+                  </div>
+                </article>
+              </section>
+            </div>
+            <% if(i % 3 == 2){ %>
+              </div> 
+            <% } %>
+          <% } %>
+      </main>
+    </div>
+  </div>
+
+  
+  
+  <!-- how to render data here -->
+
+  
+
+  
+  <script src="profile.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

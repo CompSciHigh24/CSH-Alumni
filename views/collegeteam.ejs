@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Team</title>
+    <link rel="stylesheet" href="/college.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+  </head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <body>
+  <%- include('partials/navbar.ejs') %>
+    
+    <h1 class="title"> Our College Team</h1>
+    <!-- COLLEGE TEAM GOAL USING P TAGS -->
+
+    <!-- CARDS -->
+        <main>
+          <% users.forEach((user,index) =>  { %>
+          <% if(index % 2 == 0){ %>
+            <div class= "row" >
+          <% } %>
+          <div class = "col">
+          <div class = "card">
+            <img src="<%= user.photo %>" alt="<% user.name %>">
+            <div class="card-content">
+              <h2> 
+                <%= user.name %>
+              </h2>
+              <p>
+              
+              </p>
+              <a href="#" class="button">
+                <%= user.position %>
+                <span class="material-symbols-outlined">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
+            </div>
+          </div>
+          <% if(index % 2 != 0){ %>
+            </div>
+          <% } %>
+          <% }) %>
+        </main>
+
+  </body>
+</html>

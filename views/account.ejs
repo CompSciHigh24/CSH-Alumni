@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni Personal Acc</title>
+    <link rel="stylesheet" href="/account.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <h1 class="hometitle">Personal Account</h1>
+    <!-- BOOTSTRAP GRID -->
+    <div class="container-fluid">
+      <div class="row flex-column-reverse flex-md-row">
+        <!-- NAVBAR -->
+        <nav class="col-12 col-md-4">
+          <!-- class="navbar navbar-expand-md" -->
+          <div id="nav-bar" class="navbar-expand-md">
+              <input id="nav-toggle" type="checkbox"/>
+              <div id="nav-header"><a id="nav-title" href="/home">ALUM<i class="fab fa-codepen"></i>CSH</a>
+
+                <!-- Code for the burger  -->
+                <!-- <label for="nav-toggle"><span id="nav-toggle-burger"></span></label> -->
+                <hr/>
+              </div>
+              <div id="nav-content">
+                <div class="nav-button"><a href="/home"><i class="fas fa-solid fa-house"></i><span>Home</span></a></div>
+                <div class="nav-button"><a href="/profiles"><i class="fas fa-solid fa-user-graduate"></i><span>Alumni Page</span></a></div>
+
+                <div class="nav-button"><a href="/collegeteam"><i class="fas fa-solid fa-people-group"></i><span>College Team</span></a></div>
+                <hr/>
+                <div id="nav-content-highlight"></div>
+              </div>
+              <input id="nav-footer-toggle" type="checkbox"/>
+              <div id="nav-footer">
+                <div id="nav-footer-heading">
+                  <div id="nav-footer-avatar"><img src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547"/></div>
+                  <div id="nav-footer-titlebox"><a id="nav-footer-title" href="/account" >Sam garcia</a><span id="nav-footer-subtitle">Admin</span></div>
+                  <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+                </div>
+                <div id="nav-footer-content">
+                  <center><button id="LogButt" class="button-33" href="/"role="button">Log Out</button></center>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!-- MAIN CONTENT -->
+        <main class="col-12 col-md-8">
+          <!-- h1 -->
+          <div class="form-body">
+            <div class="row">
+              <div class="form-holder">
+                <div class="form-content">
+                  <div class="form-items">
+                    <form id = "hulk" class="requires-validation" novalidate>
+                      
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="name"
+                          placeholder="Full Name"
+                          required
+                        />
+                      </div>
+                      
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        /> 
+                      </div>
+
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="gradyear"
+                          placeholder="Grad Year"
+                          >
+                      </div>
+
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="location"
+                          placeholder="Location"
+                          >
+                      </div>
+
+                      <div class="col-md-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="bio"
+                          placeholder="Bio"
+                          >
+                      </div>
+                      
+                      <!-- <div class="col-md-12">
+                        <select class="form-select mt-3" required>
+                          <option selected disabled value="">Occupation</option>
+                          <option value="jweb">College</option>
+                          <option value="sweb">Workforce</option>
+                          <option value="pmanager">Other</option>
+                        </select>
+                        <div class="valid-feedback">
+                          You selected a position!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please select a position!
+                        </div>
+                      </div> -->
+
+                      <!-- <div class="col-md-12 mt-3">
+                        <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="gender"
+                          id="male"
+                          autocomplete="off"
+                          required
+                        />
+                        <label
+                          class="btn btn-sm btn-outline-secondary"
+                          for="male"
+                          >Male</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="gender"
+                          id="female"
+                          autocomplete="off"
+                          required
+                        />
+                        <label
+                          class="btn btn-sm btn-outline-secondary"
+                          for="female"
+                          >Female</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="gender"
+                          id="secret"
+                          autocomplete="off"
+                          required
+                        />
+                        <label
+                          class="btn btn-sm btn-outline-secondary"
+                          for="secret"
+                          >Other</label
+                        >
+                      </div> -->
+                       
+
+                      <div class="form-button mt-3">
+                        <button
+                          id="submitThis"
+                          type="submit"
+                          class="btn btn-primary"
+                        >
+                          Register
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="accountCreate.js"></script>
+  </body>
+</html>

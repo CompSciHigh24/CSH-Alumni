@@ -1,0 +1,297 @@
+/*BODY*/
+
+.hometitle{
+  background-image: linear-gradient(to right , #3bc93b , #3bc93b);
+  padding-left: 35vw;
+}
+body {
+  background-image: linear-gradient(to right , #F0F8F0 , #F0F8F0);
+}
+
+/*SEARCH*/
+
+/*--------------------
+Body
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$color: #e24040;
+
+body {
+  height: 100vh;
+  margin: 0;  
+  background: #DEDEDE;
+  color: #5a6674;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+
+/*--------------------
+App
+--------------------*/
+.search-form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 40px;
+  border-radius: 40px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%);
+  background: #fff;
+  transition: all 0.3s ease;
+
+  &.focus {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.search-input {
+  position: absolute;
+  top: 10px;
+  left: 38px;
+  font-size: 14px;
+  background: none;
+  color: #5a6674;
+  width: 195px;
+  height: 20px;
+  border: none;
+  appearance: none;
+  outline: none;
+
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+.search-button {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none!important;
+  cursor: pointer;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    fill: #5a6674;
+  }
+}
+
+.search-option {
+  position: absolute;
+  text-align: right;
+  top: 10px;
+  right: 15px;
+
+  div {
+    position: relative;
+    display: inline-block;
+    margin: 0 1px;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.01;
+      cursor: pointer;
+    }
+
+    span {
+      position: absolute;
+      display: block;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      background: #929AA3;
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: 1px;
+      line-height: 1;
+      text-transform: uppercase;
+      padding: 4px 7px;
+      border-radius: 12px;
+      top: -18px;
+      transition: all .2s ease-in-out;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 4px solid #929AA3;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    &:hover span {
+      opacity: 1;
+      top: -21px;
+    }
+
+    label {
+      display: block;
+      cursor: pointer;
+    }
+
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: #5a6674;
+      opacity: 0.6;
+      transition: all .2s ease-in-out;
+      pointer-events: none;
+    }
+
+    &:hover svg {
+      opacity: 1;
+    }
+
+    input:checked + label svg {
+      fill: $color;
+      opacity: .9;
+    }
+
+    input:checked + label span {
+      background: $color;
+
+      &::after {
+        border-top-color: $color;
+      }
+    }
+  }
+}
+
+/* Button Here For Filtering */
+/* CSS */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* LOG INN GOOGLE */
+*, *:before, *:after {
+   box-sizing: border-box;
+}
+ .g-sign-in-button {
+   margin: 10px;
+   display: inline-block;
+   width: 240px;
+   height: 50px;
+   background-color: #4285f4;
+   color: #fff;
+   border-radius: 1px;
+   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+   transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+}
+ .g-sign-in-button:hover {
+   cursor: pointer;
+   -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
+   box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
+}
+ .g-sign-in-button:active {
+   background-color: #3367d6;
+   transition: background-color 0.2s;
+}
+ .g-sign-in-button .content-wrapper {
+   height: 100%;
+   width: 100%;
+   border: 1px solid transparent;
+}
+ .g-sign-in-button img {
+   width: 18px;
+   height: 18px;
+}
+ .g-sign-in-button .logo-wrapper {
+   padding: 15px;
+   background: #fff;
+   width: 48px;
+   height: 100%;
+   border-radius: 1px;
+   display: inline-block;
+}
+ .g-sign-in-button .text-container {
+   font-family: Roboto, arial, sans-serif;
+   font-weight: 500;
+   letter-spacing: 0.21px;
+   font-size: 16px;
+   line-height: 48px;
+   vertical-align: top;
+   border: none;
+   display: inline-block;
+   text-align: center;
+   width: 180px;
+}
+
+
+/* FORM FOR LOGIN */
+
+.login {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('https://civicbuilders.org/wp-content/uploads/2023/01/school-logo-comp-sci.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.d-grid{
+  color:#1ED45D;
+}
+
+#signing{
+  color:#000000;
+   background-color: #1ED45D;
+}
+
+#darker{
+
+   background-color: #64dd8f;
+}

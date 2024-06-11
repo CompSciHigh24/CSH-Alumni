@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One </title>
+  <style>
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 10px;
+      width: 300px;
+    }
+
+    .actions {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Item</h1>
+  <div class="card">
+    <p><b>Name:</b> <%= data.name %></p> 
+    <p><b>Type:</b><%= data.type %></p>
+    <p><b>Cost:</b><%= data.cost %></p>
+    <p><b>Quantity:</b><%= data.quantity %></p>
+    <a href="/items">List</a>
+
+    <button class = "deleteButton" name = '<%= found.name %>'>Delete</button>
+    <br>
+  </div>
+  <form id = "update">
+    Item name
+    <input type = "text" name = "name" required/>   
+  </form>
+  <button id = "updateButton" name = '<%= found.name %>'>Update</button>
+
+  <script src="/delete.js"></script>
+</body>
+
+</html>
